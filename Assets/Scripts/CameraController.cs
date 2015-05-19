@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour {
 	private Vector3 mouseOrigin;
 
 	// Zoom properties
-	private float minFov = 15f;
+	private float minFov = 20f;
 	private float maxFov = 90f;
 	private float sensitivity = 5f;
 
