@@ -12,7 +12,7 @@ public class StartScreenScript : MonoBehaviour {
 	}
 	
 	public void StartPressed (){
-		Application.LoadLevel (1);
+		Application.LoadLevel (2);
 	}
 
     public void QuitPressed(){

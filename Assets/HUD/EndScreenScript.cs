@@ -16,7 +16,7 @@ public class EndScreenScript : MonoBehaviour {
 	}
 	
 	public void PlayPressed (){
-		Application.LoadLevel (1);
+		Application.LoadLevel (2);
 	}
 
     public void QuitPressed(){
