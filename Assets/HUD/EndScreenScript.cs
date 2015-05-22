@@ -2,16 +2,20 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class StartScreenScript : MonoBehaviour {
+public class EndScreenScript : MonoBehaviour {
+    public Canvas leaderboardMenu;
     public Canvas quitMenu;
 
 	// Use this for initialization
 	void Start () {
-        quitMenu = quitMenu.GetComponent<Canvas>();
+        //leaderboardMenu = leaderboardMenu.GetComponent<Canvas>();
+
+        leaderboardMenu.enabled = false;
+        leaderboardMenu.enabled = true;
         quitMenu.enabled = false;
 	}
 	
-	public void StartPressed (){
+	public void PlayPressed (){
 		Application.LoadLevel (1);
 	}
 
@@ -19,7 +23,12 @@ public class StartScreenScript : MonoBehaviour {
         quitMenu.enabled = true;
     }
 
-    public void NoPressed(){
+    public void ClosePressed(){
+        leaderboardMenu.enabled = false;
+    }
+
+    public void NoPressed()
+    {
         quitMenu.enabled = false;
     }
 
