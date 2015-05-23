@@ -1,4 +1,4 @@
-﻿Shader "Multiple Lights Per-Pixel Shading" {
+﻿Shader "Specular Assignment 4" {
    Properties {
       _Color ("Diffuse Material Color", Color) = (1,1,1,1) 
       _SpecColor ("Specular Material Color", Color) = (1,1,1,1) 
@@ -45,7 +45,7 @@
         void main()
         {
     		mat4 viewMatrix = gl_ModelViewMatrix * _World2Object;
-         	vec4 EyeSpaceLightPos = viewMatrix * _WorldSpaceLightPos0;
+         	vec4 eyeSpaceLightPos = viewMatrix * _WorldSpaceLightPos0;
          
             vec3 n = normalize(dataNormal);
             vec3 e = normalize(-vec3(dataPosition));
@@ -56,14 +56,14 @@
             float intensity;
             float attenuation;
  
-            if (EyeSpaceLightPos.w == 0.0) // Directional light?
+            if (eyeSpaceLightPos.w == 0.0) // Directional light?
             {
                attenuation = 1.0; // No attenuation
-               l = normalize(vec3(EyeSpaceLightPos));
+               l = normalize(vec3(eyeSpaceLightPos));
             } 
             else // Point or Spotlight
             {
-            	vec3 vertexToLightSource = vec3(EyeSpaceLightPos - dataPosition);
+            	vec3 vertexToLightSource = vec3(eyeSpaceLightPos - dataPosition);
             	float distance = length(vertexToLightSource);
                	attenuation = 1.0 / distance; // Linear attenuation 
                	l = normalize(vertexToLightSource);
@@ -79,7 +79,7 @@
             
            	if (intensity > 0.0) 
            	{
-           		specularReflection = attenuation * vec3(_LightColor0) * vec3(_SpecColor) * pow(max(0.0, dot(reflect(-l, n), h)), _Shininess);//pow(max(dot(h, n), 0.0), _Shininess);
+           		specularReflection = attenuation * vec3(_LightColor0) * vec3(_SpecColor) * pow(max(0.0, dot(reflect(-l, n), h)), _Shininess);
             }
  
             gl_FragColor = vec4(ambientLighting + diffuseReflection + specularReflection, 1.0);
@@ -130,7 +130,7 @@
          void main()
          {
          	mat4 viewMatrix = gl_ModelViewMatrix * _World2Object;
-         	vec4 EyeSpaceLightPos = viewMatrix * _WorldSpaceLightPos0;
+         	vec4 eyeSpaceLightPos = viewMatrix * _WorldSpaceLightPos0;
          
             vec3 n = normalize(dataNormal);
             vec3 e = normalize(-vec3(dataPosition));
@@ -141,14 +141,14 @@
             float intensity;
             float attenuation;
  
-            if (0.0 == EyeSpaceLightPos.w) // Directional light?
+            if (0.0 == eyeSpaceLightPos.w) // Directional light?
             {
             	attenuation = 1.0; // No attenuation
-               	l = normalize(vec3(EyeSpaceLightPos));
+               	l = normalize(vec3(eyeSpaceLightPos));
             } 
             else // Point or Spotlight
             {
-            	vec3 vertexToLightSource = vec3(EyeSpaceLightPos - dataPosition);
+            	vec3 vertexToLightSource = vec3(eyeSpaceLightPos - dataPosition);
             	float distance = length(vertexToLightSource);
                	attenuation = 1.0 / distance; // Linear attenuation 
                	l = normalize(vertexToLightSource);
@@ -163,7 +163,7 @@
             
             if (intensity > 0.0) 
             {
-            	specularReflection = attenuation * vec3(_LightColor0) * vec3(_SpecColor) * pow(max(0.0, dot(reflect(-l, n), h)), _Shininess); //pow(max(dot(h, n), 0.0), _Shininess);
+            	specularReflection = attenuation * vec3(_LightColor0) * vec3(_SpecColor) * pow(max(0.0, dot(reflect(-l, n), h)), _Shininess);
             }
             gl_FragColor = vec4(diffuseReflection + specularReflection, 1.0);
          }
