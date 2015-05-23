@@ -1,7 +1,7 @@
 ﻿Shader "Bump Mapping Assigment 4" {
 	Properties {
-	  _BaseMap ("Base Map", 2D) = "base" {}
-	  _BumpMap ("Normal Map", 2D) = "bump" {}
+	  _BaseMap ("Base Map", 2D) = "gray" {}
+	  _BumpMap ("Normal Map", 2D) = "gray" {}
       _Color ("Diffuse Material Color", Color) = (1,1,1,1) 
       _SpecColor ("Specular Material Color", Color) = (1,1,1,1) 
       _Shininess ("Shininess", Float) = 16
@@ -31,10 +31,9 @@
         uniform vec4 _LightColor0; // color of light source (from "Lighting.cginc")
  	
  		//Data out/in
-       	varying vec3 dataHalfVec;
+ 	   	varying vec3 dataHalfVec;
        	varying vec3 dataLightVec;
         varying vec4 dataTexCoord;
-        varying vec3 eye;
         
         #ifdef VERTEX
         
@@ -44,7 +43,7 @@
         {	
         	mat4 viewMatrix = gl_ModelViewMatrix * _World2Object;
          	vec4 eyeSpaceLightPos = viewMatrix * _WorldSpaceLightPos0;
-         
+         	
         	dataTexCoord = gl_MultiTexCoord0;
         	
         	// Building the TBN matrix
@@ -52,7 +51,7 @@
         	vec3 t = normalize(gl_NormalMatrix * Tangent.xyz);
         	vec3 b = Tangent.w * cross(n, t);
         	
-        	eye = vec3(gl_ModelViewMatrix * gl_Vertex);
+        	vec3 eye = vec3(gl_ModelViewMatrix * gl_Vertex);
         	vec3 lightDir = normalize(eyeSpaceLightPos.xyz - eye);
         					
         	// Transform light vectors
@@ -78,13 +77,11 @@
         void main()
         {
         	vec4 encodedNormal = texture2D(_BumpMap, _BumpMap_ST.xy * dataTexCoord.xy + _BumpMap_ST.zw);
-            vec3 n = vec3(2.0 * encodedNormal.ab - vec2(1.0), 0.0);
-            n.z = sqrt(1.0 - dot(n, n));
+        	vec3 n = vec3(2.0 * encodedNormal.ab - vec2(1.0), 0.0);
+           	n.z = sqrt(1.0 - dot(n, n));
             n = normalize(n);
             
-            vec3 e = normalize(-vec3(eye));
-        	
-        	float attenuation;
+            float attenuation;
         	float intensity = max(dot(dataLightVec, n), 0.0);
         	
         	vec4 specularReflection = vec4(0.0, 0.0, 0.0, 0.0);
@@ -126,11 +123,11 @@
         uniform vec4 _LightColor0; // color of light source (from "Lighting.cginc")
  	
  		//Data out/in
+ 		varying vec3 dataNormal;
        	varying vec3 dataHalfVec;
        	varying vec3 dataLightVec;
         varying vec4 dataTexCoord;
-        varying vec3 eye;
-        
+         
         #ifdef VERTEX
         
         attribute vec4 Tangent;
@@ -147,7 +144,7 @@
         	vec3 t = normalize(gl_NormalMatrix * Tangent.xyz);
         	vec3 b = Tangent.w * cross(n, t);
         	
-        	eye = vec3(gl_ModelViewMatrix * gl_Vertex);
+        	vec3 eye = vec3(gl_ModelViewMatrix * gl_Vertex);
         	vec3 lightDir = normalize(eyeSpaceLightPos.xyz - eye);
         					
         	// Transform light vectors
@@ -173,12 +170,10 @@
         void main()
         {
         	vec4 encodedNormal = texture2D(_BumpMap, _BumpMap_ST.xy * dataTexCoord.xy + _BumpMap_ST.zw);
-            vec3 n = vec3(2.0 * encodedNormal.ab - vec2(1.0), 0.0);
-            n.z = sqrt(1.0 - dot(n, n));
+        	vec3 n = vec3(2.0 * encodedNormal.ab - vec2(1.0), 0.0);
+           	n.z = sqrt(1.0 - dot(n, n));
             n = normalize(n);
             
-            vec3 e = normalize(-vec3(eye));
-        	
         	float attenuation;
         	float intensity = max(dot(dataLightVec, n), 0.0);
         	
