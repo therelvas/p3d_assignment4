@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerSphereController : MonoBehaviour {
 
 	public float speed;
 	private Rigidbody rb;
+	public Text playerName;
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
+		playerName.text = Globals.playerName;
 	}
 
 	void FixedUpdate ()
