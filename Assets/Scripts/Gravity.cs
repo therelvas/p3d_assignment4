@@ -9,12 +9,8 @@ public class Gravity : MonoBehaviour {
 		sphere = GameObject.FindGameObjectWithTag("Player");
 	}
 
-	void Update() {
-
-	}
-
-	void OnTriggerEnter(Collider other) {
-
+	void OnTriggerStay(Collider other) {
+		sphere.GetComponent<Rigidbody>().AddForce(-Physics.gravity * sphere.GetComponent<Rigidbody>().mass*13);
 	}
 
 }
