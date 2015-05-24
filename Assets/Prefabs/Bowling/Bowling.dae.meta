@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: 42b7dff26c1bf874facc9e7027522878
+timeCreated: 1432501491
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bowling_Pin
+    100004: Bowling_Pin 1
+    100006: Bowling_Pin 2
+    100008: Bowling_Pin 3
+    100010: Bowling_Pin 4
+    100012: Bowling_Pin 5
+    100014: Bowling_Pin 6
+    100016: Bowling_Pin 7
+    100018: Bowling_Pin 8
+    100020: Bowling_Pin 9
+    100022: convexhull
+    100024: convexhull 1
+    100026: convexhull 2
+    100028: convexhull 3
+    100030: convexhull 4
+    100032: convexhull 5
+    100034: convexhull 6
+    100036: convexhull 7
+    100038: convexhull 8
+    100040: convexhull 9
+    100042: floor
+    100044: group_0
+    100046: group_1
+    100048: group_2
+    100050: group_3
+    100052: group_4
+    100054: group_5
+    100056: ID108
+    100058: ID121
+    100060: ID127
+    100062: ID133
+    100064: ID146
+    100066: ID152
+    100068: ID166
+    100070: ID166 1
+    100072: ID166 2
+    100074: ID166 3
+    100076: ID166 4
+    100078: ID166 5
+    100080: ID166 6
+    100082: ID166 7
+    100084: ID166 8
+    100086: ID166 9
+    100088: ID172
+    100090: ID172 1
+    100092: ID172 2
+    100094: ID172 3
+    100096: ID172 4
+    100098: ID172 5
+    100100: ID172 6
+    100102: ID172 7
+    100104: ID172 8
+    100106: ID172 9
+    100108: ID180
+    100110: ID180 1
+    100112: ID180 2
+    100114: ID180 3
+    100116: ID180 4
+    100118: ID180 5
+    100120: ID180 6
+    100122: ID180 7
+    100124: ID180 8
+    100126: ID180 9
+    100128: ID186
+    100130: ID186 1
+    100132: ID186 2
+    100134: ID186 3
+    100136: ID186 4
+    100138: ID186 5
+    100140: ID186 6
+    100142: ID186 7
+    100144: ID186 8
+    100146: ID186 9
+    100148: ID194
+    100150: ID194 1
+    100152: ID194 2
+    100154: ID194 3
+    100156: ID194 4
+    100158: ID194 5
+    100160: ID194 6
+    100162: ID194 7
+    100164: ID194 8
+    100166: ID194 9
+    100168: ID200
+    100170: ID200 1
+    100172: ID200 2
+    100174: ID200 3
+    100176: ID200 4
+    100178: ID200 5
+    100180: ID200 6
+    100182: ID200 7
+    100184: ID200 8
+    100186: ID200 9
+    100188: ID206
+    100190: ID206 1
+    100192: ID206 2
+    100194: ID206 3
+    100196: ID206 4
+    100198: ID206 5
+    100200: ID206 6
+    100202: ID206 7
+    100204: ID206 8
+    100206: ID206 9
+    100208: ID233
+    100210: ID241
+    100212: ID249
+    100214: ID257
+    100216: ID265
+    100218: ID279
+    100220: ID283
+    100222: ID287
+    100224: ID89
+    100226: ID95
+    100228: instance_0
+    100230: sphere
+    100232: staticmesh
+    100234: staticmesh 1
+    100236: staticmesh 2
+    100238: staticmesh 3
+    100240: staticmesh 4
+    100242: staticmesh 5
+    100244: staticmesh 6
+    400000: //RootNode
+    400002: Bowling_Pin
+    400004: Bowling_Pin 1
+    400006: Bowling_Pin 2
+    400008: Bowling_Pin 3
+    400010: Bowling_Pin 4
+    400012: Bowling_Pin 5
+    400014: Bowling_Pin 6
+    400016: Bowling_Pin 7
+    400018: Bowling_Pin 8
+    400020: Bowling_Pin 9
+    400022: convexhull
+    400024: convexhull 1
+    400026: convexhull 2
+    400028: convexhull 3
+    400030: convexhull 4
+    400032: convexhull 5
+    400034: convexhull 6
+    400036: convexhull 7
+    400038: convexhull 8
+    400040: convexhull 9
+    400042: floor
+    400044: group_0
+    400046: group_1
+    400048: group_2
+    400050: group_3
+    400052: group_4
+    400054: group_5
+    400056: ID108
+    400058: ID121
+    400060: ID127
+    400062: ID133
+    400064: ID146
+    400066: ID152
+    400068: ID166
+    400070: ID166 1
+    400072: ID166 2
+    400074: ID166 3
+    400076: ID166 4
+    400078: ID166 5
+    400080: ID166 6
+    400082: ID166 7
+    400084: ID166 8
+    400086: ID166 9
+    400088: ID172
+    400090: ID172 1
+    400092: ID172 2
+    400094: ID172 3
+    400096: ID172 4
+    400098: ID172 5
+    400100: ID172 6
+    400102: ID172 7
+    400104: ID172 8
+    400106: ID172 9
+    400108: ID180
+    400110: ID180 1
+    400112: ID180 2
+    400114: ID180 3
+    400116: ID180 4
+    400118: ID180 5
+    400120: ID180 6
+    400122: ID180 7
+    400124: ID180 8
+    400126: ID180 9
+    400128: ID186
+    400130: ID186 1
+    400132: ID186 2
+    400134: ID186 3
+    400136: ID186 4
+    400138: ID186 5
+    400140: ID186 6
+    400142: ID186 7
+    400144: ID186 8
+    400146: ID186 9
+    400148: ID194
+    400150: ID194 1
+    400152: ID194 2
+    400154: ID194 3
+    400156: ID194 4
+    400158: ID194 5
+    400160: ID194 6
+    400162: ID194 7
+    400164: ID194 8
+    400166: ID194 9
+    400168: ID200
+    400170: ID200 1
+    400172: ID200 2
+    400174: ID200 3
+    400176: ID200 4
+    400178: ID200 5
+    400180: ID200 6
+    400182: ID200 7
+    400184: ID200 8
+    400186: ID200 9
+    400188: ID206
+    400190: ID206 1
+    400192: ID206 2
+    400194: ID206 3
+    400196: ID206 4
+    400198: ID206 5
+    400200: ID206 6
+    400202: ID206 7
+    400204: ID206 8
+    400206: ID206 9
+    400208: ID233
+    400210: ID241
+    400212: ID249
+    400214: ID257
+    400216: ID265
+    400218: ID279
+    400220: ID283
+    400222: ID287
+    400224: ID89
+    400226: ID95
+    400228: instance_0
+    400230: sphere
+    400232: staticmesh
+    400234: staticmesh 1
+    400236: staticmesh 2
+    400238: staticmesh 3
+    400240: staticmesh 4
+    400242: staticmesh 5
+    400244: staticmesh 6
+    2300000: //RootNode
+    2300002: Bowling_Pin
+    2300004: Bowling_Pin 1
+    2300006: Bowling_Pin 2
+    2300008: Bowling_Pin 3
+    2300010: Bowling_Pin 4
+    2300012: Bowling_Pin 5
+    2300014: Bowling_Pin 6
+    2300016: Bowling_Pin 7
+    2300018: Bowling_Pin 8
+    2300020: Bowling_Pin 9
+    2300022: floor
+    2300024: group_0
+    2300026: group_1
+    2300028: group_2
+    2300030: group_3
+    2300032: group_4
+    2300034: group_5
+    2300036: ID108
+    2300038: ID121
+    2300040: ID127
+    2300042: ID133
+    2300044: ID146
+    2300046: ID152
+    2300048: ID166
+    2300050: ID166 1
+    2300052: ID166 2
+    2300054: ID166 3
+    2300056: ID166 4
+    2300058: ID166 5
+    2300060: ID166 6
+    2300062: ID166 7
+    2300064: ID166 8
+    2300066: ID166 9
+    2300068: ID172
+    2300070: ID172 1
+    2300072: ID172 2
+    2300074: ID172 3
+    2300076: ID172 4
+    2300078: ID172 5
+    2300080: ID172 6
+    2300082: ID172 7
+    2300084: ID172 8
+    2300086: ID172 9
+    2300088: ID180
+    2300090: ID180 1
+    2300092: ID180 2
+    2300094: ID180 3
+    2300096: ID180 4
+    2300098: ID180 5
+    2300100: ID180 6
+    2300102: ID180 7
+    2300104: ID180 8
+    2300106: ID180 9
+    2300108: ID186
+    2300110: ID186 1
+    2300112: ID186 2
+    2300114: ID186 3
+    2300116: ID186 4
+    2300118: ID186 5
+    2300120: ID186 6
+    2300122: ID186 7
+    2300124: ID186 8
+    2300126: ID186 9
+    2300128: ID194
+    2300130: ID194 1
+    2300132: ID194 2
+    2300134: ID194 3
+    2300136: ID194 4
+    2300138: ID194 5
+    2300140: ID194 6
+    2300142: ID194 7
+    2300144: ID194 8
+    2300146: ID194 9
+    2300148: ID200
+    2300150: ID200 1
+    2300152: ID200 2
+    2300154: ID200 3
+    2300156: ID200 4
+    2300158: ID200 5
+    2300160: ID200 6
+    2300162: ID200 7
+    2300164: ID200 8
+    2300166: ID200 9
+    2300168: ID206
+    2300170: ID206 1
+    2300172: ID206 2
+    2300174: ID206 3
+    2300176: ID206 4
+    2300178: ID206 5
+    2300180: ID206 6
+    2300182: ID206 7
+    2300184: ID206 8
+    2300186: ID206 9
+    2300188: ID233
+    2300190: ID241
+    2300192: ID249
+    2300194: ID257
+    2300196: ID265
+    2300198: ID279
+    2300200: ID283
+    2300202: ID287
+    2300204: ID89
+    2300206: ID95
+    2300208: sphere
+    2300210: staticmesh
+    2300212: staticmesh 1
+    2300214: staticmesh 2
+    2300216: staticmesh 3
+    2300218: staticmesh 4
+    2300220: staticmesh 5
+    2300222: staticmesh 6
+    3300000: //RootNode
+    3300002: Bowling_Pin
+    3300004: Bowling_Pin 1
+    3300006: Bowling_Pin 2
+    3300008: Bowling_Pin 3
+    3300010: Bowling_Pin 4
+    3300012: Bowling_Pin 5
+    3300014: Bowling_Pin 6
+    3300016: Bowling_Pin 7
+    3300018: Bowling_Pin 8
+    3300020: Bowling_Pin 9
+    3300022: floor
+    3300024: group_0
+    3300026: group_1
+    3300028: group_2
+    3300030: group_3
+    3300032: group_4
+    3300034: group_5
+    3300036: ID108
+    3300038: ID121
+    3300040: ID127
+    3300042: ID133
+    3300044: ID146
+    3300046: ID152
+    3300048: ID166
+    3300050: ID166 1
+    3300052: ID166 2
+    3300054: ID166 3
+    3300056: ID166 4
+    3300058: ID166 5
+    3300060: ID166 6
+    3300062: ID166 7
+    3300064: ID166 8
+    3300066: ID166 9
+    3300068: ID172
+    3300070: ID172 1
+    3300072: ID172 2
+    3300074: ID172 3
+    3300076: ID172 4
+    3300078: ID172 5
+    3300080: ID172 6
+    3300082: ID172 7
+    3300084: ID172 8
+    3300086: ID172 9
+    3300088: ID180
+    3300090: ID180 1
+    3300092: ID180 2
+    3300094: ID180 3
+    3300096: ID180 4
+    3300098: ID180 5
+    3300100: ID180 6
+    3300102: ID180 7
+    3300104: ID180 8
+    3300106: ID180 9
+    3300108: ID186
+    3300110: ID186 1
+    3300112: ID186 2
+    3300114: ID186 3
+    3300116: ID186 4
+    3300118: ID186 5
+    3300120: ID186 6
+    3300122: ID186 7
+    3300124: ID186 8
+    3300126: ID186 9
+    3300128: ID194
+    3300130: ID194 1
+    3300132: ID194 2
+    3300134: ID194 3
+    3300136: ID194 4
+    3300138: ID194 5
+    3300140: ID194 6
+    3300142: ID194 7
+    3300144: ID194 8
+    3300146: ID194 9
+    3300148: ID200
+    3300150: ID200 1
+    3300152: ID200 2
+    3300154: ID200 3
+    3300156: ID200 4
+    3300158: ID200 5
+    3300160: ID200 6
+    3300162: ID200 7
+    3300164: ID200 8
+    3300166: ID200 9
+    3300168: ID206
+    3300170: ID206 1
+    3300172: ID206 2
+    3300174: ID206 3
+    3300176: ID206 4
+    3300178: ID206 5
+    3300180: ID206 6
+    3300182: ID206 7
+    3300184: ID206 8
+    3300186: ID206 9
+    3300188: ID233
+    3300190: ID241
+    3300192: ID249
+    3300194: ID257
+    3300196: ID265
+    3300198: ID279
+    3300200: ID283
+    3300202: ID287
+    3300204: ID89
+    3300206: ID95
+    3300208: sphere
+    3300210: staticmesh
+    3300212: staticmesh 1
+    3300214: staticmesh 2
+    3300216: staticmesh 3
+    3300218: staticmesh 4
+    3300220: staticmesh 5
+    3300222: staticmesh 6
+    4300000: SketchUp
+    4300002: ID279
+    4300004: ID283
+    4300006: ID287
+    4300008: sphere
+    4300010: group_0
+    4300012: group_1
+    4300014: group_2
+    4300016: group_3
+    4300018: group_4
+    4300020: group_5
+    4300022: staticmesh
+    4300024: staticmesh
+    4300026: staticmesh
+    4300028: staticmesh
+    4300030: ID89
+    4300032: ID95
+    4300034: staticmesh
+    4300036: ID108
+    4300038: staticmesh
+    4300040: ID121
+    4300042: ID127
+    4300044: ID133
+    4300046: staticmesh
+    4300048: ID146
+    4300050: ID152
+    4300052: Bowling_Pin
+    4300054: ID166
+    4300056: ID172
+    4300058: ID180
+    4300060: ID186
+    4300062: ID194
+    4300064: ID200
+    4300066: ID206
+    4300068: floor
+    4300070: ID233
+    4300072: ID241
+    4300074: ID249
+    4300076: ID257
+    4300078: ID265
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
