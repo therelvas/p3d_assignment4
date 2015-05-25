@@ -50,6 +50,9 @@ public class PlayerSphereController : MonoBehaviour {
 					}
 				}
 			}
+		}else if(other.gameObject.name.Equals("EndZone")){
+			Globals.endMessage = "CONGRATULATIONS";
+			Application.LoadLevel(3);
 		}
 	}
 }

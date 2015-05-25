@@ -15,19 +15,22 @@ public class EndScreenScript : MonoBehaviour {
 		ArrayList scores = new ArrayList(System.IO.File.ReadAllLines(@"scores.txt"));
 
 		bool added = false;
-		for(int i=0; i<scores.Count; i++)
-			if(Globals.score > i){
+		for(int i=0; i<scores.Count; i++){
+			int sc = int.Parse(scores[i].ToString().Split('\t')[1]);
+			if(Globals.score > sc){
 				scores.Insert(i, Globals.playerName + "\t" + Globals.score);
 				added = true;
+				break;
 			}
+		}
 		if(!added)
 			scores.Add(Globals.playerName + "\t" + Globals.score);
 
 		System.IO.File.WriteAllLines(@"scores.txt", (string[])scores.ToArray(typeof(string)));
 		messageLbl.text = Globals.endMessage;
 		scoresLbl.text = "";
-		foreach(string s in scores)
-			scoresLbl.text += s+"\n";
+		for(int i=0; i<8; i++)
+			scoresLbl.text += scores[i]+"\n";
         leaderboardMenu.enabled = false;
         leaderboardMenu.enabled = true;
         quitMenu.enabled = false;
