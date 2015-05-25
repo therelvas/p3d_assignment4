@@ -1,5 +1,7 @@
 Player 1	1125
+Player 1	845
 Player 1	775
+Player 1	730
 Player 1	615
 Player 1	595
 Player 1	530
@@ -1719,6 +1721,7 @@ biTo	1715
 biTo	1715
 biTo	1715
 biTo	1715
+Player 1	525
 Player 1	525
 Player 1	525
 Player 1	350
