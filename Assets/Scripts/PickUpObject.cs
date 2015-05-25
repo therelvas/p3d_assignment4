@@ -2,8 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PickUpObject : MonoBehaviour {
-	
+public class PickUpObject : MonoBehaviour 
+{	
 	private Text score;
 	public int scoreIncrement;
 	public AudioClip grabSound;
@@ -15,7 +15,7 @@ public class PickUpObject : MonoBehaviour {
 
 	void OnTriggerEnter (Collider collider) 
 	{
-		if(collider.gameObject.gameObject.name.Equals("player_sphere")) 
+		if(collider.gameObject.tag.Equals("Player")) 
 		{
 			AudioSource.PlayClipAtPoint(grabSound, transform.position);
 

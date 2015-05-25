@@ -10,7 +10,6 @@ public class Gravity : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other) {
-		sphere.GetComponent<Rigidbody>().AddForce(-Physics.gravity * sphere.GetComponent<Rigidbody>().mass*13);
+		sphere.GetComponent<Rigidbody>().AddForce(-Physics.gravity * sphere.GetComponent<Rigidbody>().mass * 13);
 	}
-
 }
