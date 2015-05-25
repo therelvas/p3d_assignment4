@@ -36,7 +36,7 @@ public class PlayerSphereController : MonoBehaviour {
 
 			Globals.lives--;
 
-			if(Globals.lives < 0) {
+			if(Globals.lives < 1) {
 				Application.LoadLevel(3);
 			}
 			else

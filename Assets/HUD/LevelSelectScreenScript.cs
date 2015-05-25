@@ -4,17 +4,21 @@ using System.Collections;
 
 public class LevelSelectScreenScript : MonoBehaviour {
 	public InputField playerNameField;
+	public Canvas loadingPanel;
+
 	// Use this for initialization
 	void Start () {
+		loadingPanel.enabled = false;
 	}
 	
 	public void LevelOnePressed (){
+		loadingPanel.enabled = true;
 		Application.LoadLevel (1);
 		Globals.playerName = playerNameField.text;
 	}
 
-    public void LevelTwoPressed()
-    {
+    public void LevelTwoPressed(){
+		loadingPanel.enabled = true;
         Application.LoadLevel(1);
 		Globals.playerName = playerNameField.text;
     }
