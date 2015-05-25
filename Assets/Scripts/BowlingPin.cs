@@ -15,7 +15,6 @@ public class BowlingPin : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if(once)
 			if(other.gameObject == sphere) {
-			Debug.Log("AQUII");
 				once = false;
 				//ADD SCORE
 				Globals.score += 10;
