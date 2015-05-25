@@ -1,3 +1,4 @@
+Player 1	1515
 Player 1	1125
 Player 1	845
 Player 1	775
