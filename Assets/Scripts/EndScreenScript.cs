@@ -29,8 +29,8 @@ public class EndScreenScript : MonoBehaviour {
 		System.IO.File.WriteAllLines(@"scores.txt", (string[])scores.ToArray(typeof(string)));
 		messageLbl.text = Globals.endMessage;
 		scoresLbl.text = "";
-		for(int i=0; i<8; i++)
-			scoresLbl.text += scores[i]+"\n";
+		for(int i = 0; i < 8 && i < scores.Count; i++)
+			scoresLbl.text += scores[i] + "\n";
         leaderboardMenu.enabled = false;
         leaderboardMenu.enabled = true;
         quitMenu.enabled = false;

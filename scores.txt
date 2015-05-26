@@ -1,0 +1,2 @@
+Player 1	4000
+Player 1	1050
