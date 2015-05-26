@@ -19,6 +19,9 @@ public class PlayerSphereController : MonoBehaviour {
 		playerName = GameObject.Find("PlayerName").GetComponent<Text>();
 		playerName.text = Globals.playerName;
 		lives = GameObject.FindGameObjectsWithTag("Lives");
+		Globals.lives = 3;
+		Globals.score = 0;
+		Globals.endMessage = "GAME OVER";
 	}
 
 	void FixedUpdate ()

@@ -14,7 +14,7 @@ public class LevelSelectScreenScript : MonoBehaviour {
 	public void LevelOnePressed (){
 		loadingPanel.enabled = true;
 		Application.LoadLevel (1);
-		Globals.playerName = playerNameField.text;
+		Globals.playerName = playerNameField.text != ""? playerNameField.text: "Player 1";
 	}
 
     public void LevelTwoPressed(){
