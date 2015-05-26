@@ -12,4 +12,11 @@ public class TurnLightsOn : MonoBehaviour {
 				light.transform.GetComponent<Light>().enabled = true;
 		}
 	}
+
+	void OnTriggerExit(Collider other) {
+		if (other.gameObject.Equals(sphere)) {
+			foreach (GameObject light in l)
+				light.transform.GetComponent<Light>().enabled = false;
+		}
+	}
 }
